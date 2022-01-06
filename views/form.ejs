@@ -21,20 +21,28 @@
         <!-- Input Form -->
             <div class="form-group">
                     <label class="mr-md-2" for="">Title</label>
-                    <input type="text" name="title" id="title" class="form-control" placeholder="title" aria-describedby="helpId">
+                    <input required type="text" name="title" id="title" class="form-control" placeholder="title" aria-describedby="helpId">
 
             </div>
         
             <div class="form-group">
                 <label class="mr-md-2" for="">Coords</label>
-                <input type="text" name="coords" id="coords" class="form-control" placeholder="33,45,55,..." aria-describedby="helpId">
+                <input required type="text" name="coords" id="coords" class="form-control" placeholder="33,45,55,..." aria-describedby="helpId">
 
         </div>
 
 
         <div class="form-group">
             <label for="" class="mr-md-2">Shape</label>
-            <input type="text" name="shape" id="shape" class="form-control"  placeholder="rect" aria-describedby="helpId">   
+
+            <select class="form-control" name="shape" id="" required>
+                <option value="rectangle">Rectangle</option>
+                <option value="circle">Circle</option>
+                <option value="polygon">Polygon</option>
+
+            </select>
+
+             
         </div>
 
 <!-- Action Buttons -->
@@ -45,51 +53,18 @@
     </div> -->
 
     <div class="col-md-3">
-        <button type="submit" class="btn btn-success btn-lg btn-block">Add Data</button>
+        <button type="submit" class="btn btn-success btn-lg btn-block"> Add Data</button>
     </div>
 
 
     <div class="col-md-3">
-        <button class="btn btn-primary btn-lg btn-block" id="table-toggle" href="#data-table">See Data</button>
+        <a href="/data" class="btn btn-primary btn-lg btn-block mt-2 mt-md-0" id="table-toggle" href="#data-table"> See Data</a>
     </div>
 
 
 </div>
 
 </form>
-
-
-
-
-
-
-
-
-
-<!-- Avaiable Data -->
-
-<table class="table mt-md-5 table-striped border text-center"  id="data-table">
-    <thead>
-        <tr class="bg-dark text-white">
-            <th>Title</th>
-            <th>Cords</th>
-            <th>Shape</th>
-            <th>Action</th>
-        </tr>
-    </thead>
-    <tbody>
-
-        <tr>
-            <td>Car Parking</td>
-            <td>47,45,44,900</td>
-            <td>rect</td>
-            
-            <td class=""><a href="#" style="color: red;"><i class="fa fa-trash"></i></a></td>
-
-        </tr>
-
-    </tbody>
-</table>
 
 
 
