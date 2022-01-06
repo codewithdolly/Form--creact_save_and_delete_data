@@ -21,10 +21,6 @@ app.get("/", function (req, res) {
   res.render("form.ejs");
 });
 
-
-
-
-
 const Schema = mongoose.Schema;
 const ObjectId = Schema.ObjectId;
 
@@ -53,30 +49,20 @@ app.post("/submit-data", function (req, res) {
       console.log(err);
     } else {
       console.log("data inserted successfully" + createdData);
-      res.redirect('/data'); //send a respose  that data is saved in DB
+      res.redirect("/data"); //send a respose  that data is saved in DB
     }
   });
 });
 
-
-
-app.get("/data",(req,res)=>{
-
-Coordinate.find((err,Coordinates)=>{
-
-if(!err){
-  console.log("data found"+Coordinates)
-res.render("data.ejs",{Coordinates:Coordinates})
-
-}
-else{
-  console.log(err)
-}
-
-})
-  
-})
-
-
+app.get("/data", (req, res) => {
+  Coordinate.find((err, Coordinates) => {
+    if (!err) {
+      console.log("data found" + Coordinates);
+      res.render("data.ejs", { Coordinates: Coordinates });
+    } else {
+      console.log(err);
+    }
+  });
+});
 
 app.listen(PORT, console.log("server started on port " + PORT));
