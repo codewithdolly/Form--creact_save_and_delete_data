@@ -1,83 +1,119 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <title>Form</title>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
-      
+    <div class="container mt-md-5 shadow-sm p-5 mb-5 bg-white border">
+      <h1 class="text-center" style="font-family: auto; font-size: 45px">
+        Input Data Form
+      </h1>
 
-    <div class="container mt-md-5">
-            
-
-        <form action="/submit-data" method="post" class=" p-3">
+      <form action="/submit-data" method="post" class="p-3 p-0">
         <!-- Input Form -->
-            <div class="form-group">
-                    <label class="mr-md-2" for="">Title</label>
-                    <input required type="text" name="title" id="title" class="form-control" placeholder="title" aria-describedby="helpId">
-
-            </div>
-        
-            <div class="form-group">
-                <label class="mr-md-2" for="">Coords</label>
-                <input required type="text" name="coords" id="coords" class="form-control" placeholder="33,45,55,..." aria-describedby="helpId">
-
+        <div class="form-group">
+          <label class="mr-md-2" for="">Title</label>
+          <input
+            required
+            type="text"
+            name="title"
+            id="title"
+            class="form-control"
+            placeholder="title"
+            aria-describedby="helpId"
+          />
         </div>
-
 
         <div class="form-group">
-            <label for="" class="mr-md-2">Shape</label>
-
-            <select class="form-control" name="shape" id="" required>
-                <option value="rectangle">Rectangle</option>
-                <option value="circle">Circle</option>
-                <option value="polygon">Polygon</option>
-
-            </select>
-
-             
+          <label class="mr-md-2" for="">Coords</label>
+          <input
+            required
+            type="text"
+            name="coords"
+            id="coords"
+            class="form-control"
+            placeholder="33,45,55,..."
+            aria-describedby="helpId"
+          />
         </div>
 
-<!-- Action Buttons -->
-<div class="row p-0 m-0">
-<!-- 
-    <div class="col-md-3">
-        <button class="btn btn-danger btn-lg btn-block">Delete</button>
-    </div> -->
+        <div class="form-group">
+          <label for="" class="mr-md-2">Shape</label>
 
-    <div class="col-md-3">
-        <button type="submit" class="btn btn-success btn-lg btn-block"> Add Data</button>
+          <select class="form-control" name="shape" id="" required>
+            <option value="rectangle">Rectangle</option>
+            <option value="circle">Circle</option>
+            <option value="polygon">Polygon</option>
+          </select>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="row p-0 m-0">
+          <div class="col-md-3">
+            <button type="submit" class="btn btn-success btn-lg btn-block">
+              Add Data
+            </button>
+          </div>
+
+          <div class="col-md-3">
+            <a
+              href="/data"
+              class="btn btn-primary btn-lg btn-block mt-2 mt-md-0"
+              id="table-toggle"
+              href="#data-table"
+            >
+              See Data</a
+            >
+          </div>
+
+          <div class="col-md-3">
+            <a
+              href="https://github.com/hcmay2021-Dolly?tab=repositories"
+              class="btn btn-dark btn-lg btn-block mt-2 mt-md-0"
+              id="table-toggle"
+            >
+              Github</a
+            >
+          </div>
+        </div>
+      </form>
     </div>
-
-
-    <div class="col-md-3">
-        <a href="/data" class="btn btn-primary btn-lg btn-block mt-2 mt-md-0" id="table-toggle" href="#data-table"> See Data</a>
-    </div>
-
-
-</div>
-
-</form>
-
-
-
-
-</div>
-
-
-
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
