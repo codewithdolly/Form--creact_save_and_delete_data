@@ -33,6 +33,7 @@ const projectCoordinate = new Schema({
 
 //Creating Model
 const Coordinate = mongoose.model("Coordinate", projectCoordinate);
+console.log(Coordinate);
 // create a coordinate post
 var codata = new Coordinate();
 
